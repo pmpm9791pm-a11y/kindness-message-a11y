@@ -2,84 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kindness Message</title>
+  <title>Support Request - Humanitarian Assistance</title>
+  <meta name="description" content="Direct support request from someone living with chronic illness. Your help can make a real difference in providing basic needs and medication.">
+  <meta name="keywords" content="support help, chronic illness, humanitarian aid, email contact, kindness">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f8f9fa;
       color: #333;
       padding: 20px;
-      line-height: 1.6;
+      line-height: 1.8;
+      margin: 0;
     }
     .container {
       max-width: 700px;
-      margin: auto;
-      background: #fff;
+      margin: 0 auto;
+      background: #ffffff;
       padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
-    .highlight {
-      background-color: #e0ffe0;
-      padding: 10px;
-      border-left: 4px solid #4CAF50;
-      margin-bottom: 20px;
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
     }
-    .crypto {
-      background-color: #fff8dc;
-      padding: 10px;
-      border-left: 4px solid #ff9800;
-      margin-bottom: 20px;
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    .contact-box {
+      background-color: #f8f9fa;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      direction: ltr;
+      text-align: center;
+      font-family: monospace;
       word-break: break-word;
     }
-    .share {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .share button {
-      background-color: #2196F3;
+    .share-btn {
+      background-color: #27ae60;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-size: 16px;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
-    }
-    .share button:hover {
-      background-color: #0b7dda;
+      display: block;
+      margin: 30px auto;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="highlight">
-      Hello to all kind and noble humans. I am a 46-year-old man living with a chronic illness, and I offer this message with hope and respect...
+    <h1>Humanitarian Support Request</h1>
+    
+    <h2>Appeal for Assistance</h2>
+    <p>I am reaching out with hope and respect to kind-hearted individuals who believe in making a difference.</p>
+    
+    <h2>Current Situation</h2>
+    <p>Living with chronic illness presents daily challenges in meeting basic needs and accessing necessary medication.</p>
+    
+    <h2>How You Can Help</h2>
+    <p>If you feel moved to assist, even small contributions can significantly impact quality of life and access to essential resources.</p>
+    <p>Your support represents the true spirit of human compassion and makes a tangible difference.</p>
+
+    <div class="contact-box">
+      <strong>Contact Email:</strong><br>
+      kindness.recovery.illness.1979@gmail.com
     </div>
 
-    <p>If you feel moved to help, even a small amount can make a big difference in my life. I’ve created this page to reach out with honesty and dignity, hoping that someone out there might be able to support me during this difficult time.</p>
+    <p>For direct communication and assistance, please use the email address above.</p>
 
-    <p>There is no organization or intermediary—just me, trying to survive and stay hopeful. If you’d like to help directly, here are my cryptocurrency addresses:</p>
+    <button class="share-btn" onclick="sharePage()">Share this page</button>
 
-    <div class="crypto">
-      <strong>Bitcoin (BTC):</strong><br>
-      bc1q0p4asr64m3y9pszusclefztsw98qux4lfrjm8v
-    </div>
-
-    <div class="crypto">
-      <strong>Ethereum (ETH):</strong><br>
-      0x7f3c2e8b9a1f4c2a9d8e7b6c3f2a1d9e8b7c6f2a
-    </div>
-
-    <div class="crypto">
-      <strong>USDT (TRC20):</strong><br>
-      TX7f3c2e8b9a1f4c2a9d8e7b6c3f2a1d9e8
-    </div>
-
-    <p>If you’re unable to help financially, sharing this page with others would mean the world to me. Thank you for reading, and for your compassion.</p>
-
-    <div class="share">
-      <button onclick="navigator.share({title: 'Kindness Message', url: window.location.href})">Share this page</button>
-    </div>
+    <p style="text-align: center; margin-top: 30px; color: #666;">
+      Thank you for your consideration and kindness
+    </p>
   </div>
+
+  <script>
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Support Request - Humanitarian Assistance',
+          text: 'A sincere appeal for support from someone facing health challenges',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => alert('Page link copied to clipboard!'));
+      }
+    }
+  </script>
 </body>
 </html>
